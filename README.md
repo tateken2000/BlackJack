@@ -1,18 +1,46 @@
-## Getting Started
+## プロジェクト名
+ブラックジャックゲーム(CLI)
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## 作成目的
+- クラス設計を学ぶため
 
-## Folder Structure
+## 実装機能
+- 山札（52枚）の生成
+- カードのシャッフル
+- プレイヤー・ディーラーへのカード配布
+- Hit / Stand の選択機能
+- 手札合計値の計算
+- A を 1 または 11 として扱う処理
+- バースト（21超え）判定
+- ディーラーの自動行動
+- 勝敗判定
+- 手札・結果表示
 
-The workspace contains two folders by default, where:
+## クラス構成
+- Card
+- Dealer
+- Deck
+- Game
+- Hand
+- Judge
+- Main
+- Mark
+- Player
+- Rank
+- Result
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## 学んだこと
+- クラスごとに役割を分ける重要性
+- 「ゲーム進行」と「カード管理」を分離する設計
+- オブジェクト同士を連携させる考え方
+- while文を使ったターン制御
+- 条件分岐によるゲームロジック実装
+- リストを使った手札管理
+- A の値変更など複数条件を考慮したロジック設計
+- CLIゲームでも設計を整理すると実装しやすくなること
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## 工夫した点
+- クラスごとに責務を分離し、可読性を意識した
+- Hand クラスに合計値計算をまとめ、処理を集中させた
+- ディーラーを自動行動にしてゲームらしさを再現した
+- 勝敗判定を Judge クラスに分離し、責務を明確化した
